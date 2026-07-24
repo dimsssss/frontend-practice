@@ -1,0 +1,86 @@
+/* ---------- 1. 리셋 ---------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1, h2, h3, h4,
+p, figure, blockquote,
+dl, dd {
+  margin: 0;
+}
+
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+  padding: 0;
+}
+
+img,
+picture,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ---------- 2. 토큰 ---------- */
+
+:root {
+  --clr-primary: hsl(257, 40%, 49%);
+  --clr-accent: hsl(300, 69%, 71%);
+  --clr-white: hsl(0, 0%, 100%);
+
+  --ff-heading: 'Poppins', sans-serif;
+  --ff-body: 'Open Sans', sans-serif;
+
+  --fw-regular: 400;
+  --fw-semibold: 600;
+}
+
+/* ---------- 3. 기본 요소 ---------- */
+
+body {
+  min-height: 100dvh;
+  font-family: var(--ff-body);
+  font-weight: var(--fw-regular);
+  line-height: 1.6;
+  background-color: var(--clr-primary);
+  color: var(--clr-white);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+  font-family: var(--ff-heading);
+  font-weight: var(--fw-semibold);
+  line-height: 1.25;
+}
+
+a {
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--clr-accent);
+  outline-offset: 3px;
+}

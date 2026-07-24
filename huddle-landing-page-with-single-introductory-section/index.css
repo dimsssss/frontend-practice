@@ -1,0 +1,156 @@
+body {
+  background-image: url('./images/bg-mobile.svg');
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: contain;
+}
+
+#app {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1.5rem;
+}
+
+.logo {
+  margin-bottom: 3.5rem;
+}
+
+.logo img {
+  width: 8rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 3.75rem;
+}
+
+.description {
+  max-width: 32rem;
+  text-align: center;
+}
+
+.description h1 {
+  font-size: 1.5rem;
+  text-wrap: balance;
+}
+
+.description p {
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+.register {
+  margin-top: 1.5rem;
+  padding: 0.75rem 4.5rem;
+  border: none;
+  border-radius: 100vmax;
+  background-color: var(--clr-white);
+  color: var(--clr-primary);
+  font-family: var(--ff-heading);
+  font-size: 0.75rem;
+  cursor: pointer;
+  box-shadow: 0 3px 8px hsl(0 0% 0% / 0.25);
+  transition: background-color 200ms, color 200ms;
+}
+
+.register:hover {
+  background-color: var(--clr-accent);
+  color: var(--clr-white);
+}
+
+.sns-container {
+  margin-top: auto;
+  padding-top: 3rem;
+}
+
+.sns-container ul {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.sns-container a {
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  color: var(--clr-white);
+  transition: color 200ms;
+}
+
+.sns-container a:hover {
+  color: var(--clr-accent);
+}
+
+.sns-container svg {
+  width: 0.875rem;
+  height: 0.875rem;
+  fill: currentColor;
+}
+
+
+@media (width >= 900px) {
+  body {
+    background-image: url('./images/bg-desktop.svg');
+    background-position: center;
+    background-size: cover;
+  }
+
+  #app {
+    max-width: 90rem;      /* 1440px */
+    margin-inline: auto;
+    padding: 2.5rem 5rem;
+  }
+
+  .illustration img {
+    width: 100%;
+  }
+
+  .container {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 3.75rem;
+  }
+
+  .description {
+    flex: 1 1 42%;
+    padding-top: 2.5rem;
+    text-align: left;
+  }
+
+
+  .logo {
+    margin-bottom: 5.5rem;
+  }
+
+  .logo img {
+    width: 12.5rem;
+  }
+
+
+  .illustration {
+    flex: 1 1 58%;
+  }
+
+
+  .description h1 {
+    font-size: 2.5rem;
+  }
+
+  .description p {
+    font-size: 1.125rem;
+  }
+
+  .register {
+    padding: 0.9rem 5rem;
+    font-size: 1.125rem;
+  }
+
+  .sns-container ul {
+    justify-content: flex-end;
+  } 
+}
