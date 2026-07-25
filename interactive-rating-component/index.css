@@ -1,0 +1,73 @@
+.card h1 {
+  color: var(--clr-white);
+  font-size: clamp(1.5rem, 4vw, 1.75rem);
+  margin-bottom: 0.625rem;
+}
+
+.scores {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.circle {
+  --size: 3.1875rem;
+  display: grid;
+  place-items: center;
+  inline-size: var(--size);
+  block-size: var(--size);
+  border-radius: 50%;
+  flex-shrink: 0;
+  background: var(--clr-grey-850);
+  color: var(--clr-grey-500);
+  border: none;
+  font-weight: var(--fw-bold);
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+header .circle {
+  --size: 3rem;
+  cursor: default;
+}
+
+.submitButton {
+  max-width: 100%;
+  background: var(--fw-regular);
+}
+
+.scores .circle[data-selected="true"] {
+  background: var(--clr-white);
+  color: black;
+}
+
+.scores .circle:hover {
+  background: var(--clr-orange-500);
+  color: black;
+}
+
+.button {
+  width: 100%;
+  padding: 0.75rem;
+  background: var(--clr-orange-500);
+  color: black;
+  border: none;
+  border-radius: 999px;
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.125em;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.button:hover {
+  background: var(--clr-white);
+  color: black;
+}
+
+@media (hover: hover) {
+  .scores .circle:hover {
+    background: var(--clr-orange-500);
+    color: var(--clr-white);
+  }
+}

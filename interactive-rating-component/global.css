@@ -1,0 +1,59 @@
+:root {
+  /* Primary */
+  --clr-orange-500: hsl(25, 97%, 53%);
+
+  /* Neutral */
+  --clr-white:      hsl(0, 100%, 100%);
+  --clr-grey-500:   hsl(217, 12%, 63%);
+  --clr-grey-900:   hsl(213, 19%, 18%);
+  --clr-grey-950:   hsl(216, 12%, 8%);
+  --clr-grey-850: hsl(213, 20%, 22%); /* 원 배경용 추가 */
+
+
+  /* Typography */
+  --ff-base: "Overpass", sans-serif;
+  --fw-regular: 400;
+  --fw-bold: 700;
+  --fs-body: 0.9375rem; /* 15px */
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+ul, ol { list-style: none; }
+a { text-decoration: none; color: inherit; }
+
+body { min-height: 100vh; }
+#root, #__next { isolation: isolate; }
+
+p {
+  font-size: 15px;
+}
