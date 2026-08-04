@@ -1,0 +1,94 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+
+:root {
+  /* Primary */
+  --clr-blue-500:  hsl(223, 87%, 63%);
+
+  /* Secondary */
+  --clr-blue-200:  hsl(223, 100%, 88%);
+  --clr-red-400:  hsl(354, 100%, 66%);
+
+
+  /* Neutral */
+  --clr-gray-400:  hsl(0, 0%, 59%);
+  --clr-blue-950:  hsl(209, 33%, 12%);
+
+  --ff-base: "Libre Franklin", sans-serif;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+  font-family: var(--ff-base);
+  font-size: 20px;   /* 스타일 가이드 body copy */
+  line-height: 1.5;  /* 리셋의 line-height:1 은 h1에서 글자가 붙어 보임 */
+  color: var(--clr-blue-950);
+}
+
+/* 리셋 목록에 input/button이 없어서 폼 요소는 브라우저 기본 폰트로 남음 */
+input, button, textarea, select { font: inherit; }
+
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+input {
+  border: 1px solid var(--clr-blue-200);
+  border-radius: 1.75rem;
+  padding: 0 2rem;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--clr-blue-500);
+  box-shadow: 0 0 0 3px hsl(223 87% 63% / 0.25);
+}

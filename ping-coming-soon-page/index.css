@@ -1,0 +1,135 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5rem 1.5rem 3rem;
+}
+
+.logo { margin-bottom: 2.5rem; }
+.logo img { width: 90px; }
+
+.subscribe {
+  width: 100%;
+  max-width: 40rem;          /* 640px — 디자인 폼 너비 */
+  margin-bottom: 5.5rem;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 1rem;
+  margin-bottom: 2.5rem;     /* 1rem → 2.5rem */
+}
+
+h1 {
+  font-size: clamp(1.5rem, 5vw, 3rem);
+  font-weight: 300;
+  color: var(--clr-gray-400);
+  letter-spacing: 0.02em;
+}
+h1 span { font-weight: 700; color: var(--clr-blue-950); }
+
+form {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;   /* 에러 문구 생겨도 버튼이 늘어나지 않게 */
+  gap: 1rem;
+}
+
+.input-container { flex: 1; }   /* 없어서 input이 안 늘어나던 원인 */
+
+.email {
+  width: 100%;
+  height: 3.375rem;          /* 버튼과 높이 통일 (54px) */
+  background: white;
+  border-radius: 1.75rem;
+  border: 1px solid var(--clr-blue-200);
+}
+
+.email::placeholder {
+  text-align: left;          /* center → left */
+  color: var(--clr-blue-200);
+}
+
+.email[aria-invalid="true"],
+.email.error { border-color: var(--clr-red-400); }
+
+.error-message {
+  min-height: 1.25rem;       /* 문구 나타날 때 레이아웃 흔들림 방지 */
+  margin-top: 0.5rem;
+  padding-left: 2rem;
+  font-size: 0.75rem;
+  font-style: italic;
+  color: var(--clr-red-400);
+}
+
+.submit {
+  flex: 0 0 12.5rem;         /* 10rem → 12.5rem (200px) */
+  height: 3.375rem;
+  background: var(--clr-blue-500);
+  color: white;
+  border-radius: 1.75rem;
+  border: 1px solid transparent;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  box-shadow: 0 5px 10px hsl(223 87% 63% / 0.25);
+  transition: opacity 0.2s;
+}
+
+.submit:hover { opacity: 0.8; }
+
+.dashboard-image-container {
+  width: 100%;
+  max-width: 40rem;
+  margin-bottom: 4.5rem;
+}
+
+.dashboard-image { width: 100%; }
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sns-container {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.circle a {
+  color: var(--clr-blue-500);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;               /* 44px → 32px (디자인 크기) */
+  height: 2rem;
+  border: 1px solid var(--clr-blue-200);
+  border-radius: 50%;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.circle a svg { width: 0.875rem; height: 0.875rem; }
+
+.circle a:hover {
+  background: var(--clr-blue-500);
+  border-color: var(--clr-blue-500);
+  color: white;
+}
+
+.footer p {
+  font-size: 0.75rem;        /* 20px 상속 → 12px */
+  color: var(--clr-gray-400);
+}
+
+@media (max-width: 40em) {
+  .app { padding: 3rem 1.5rem 2rem; }
+  form { flex-direction: column; }
+  .input-container { width: 100%; }
+  .submit { flex: none; width: 100%; }
+  .error-message { text-align: center; padding-left: 0; }
+  .subscribe { margin-bottom: 4rem; }
+}
